@@ -13,7 +13,7 @@
 /* ---FOR SMARTPHONE----------------------------------------------- */
 @media all and (max-width: 670px) {
     header {
-        padding: 30px;
+        padding: 0px 20px;
     }
 
     .container {
@@ -22,7 +22,7 @@
 
     .intro h1 {
         font-size: 40px;
-        line-height: 1.8rem;
+        line-height: 2rem;
     }
     
     .intro h2 {
