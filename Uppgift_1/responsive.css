@@ -12,8 +12,12 @@
 
 /* ---FOR SMARTPHONE----------------------------------------------- */
 @media all and (max-width: 670px) {
+    header {
+        padding: 30px;
+    }
+    
     .container {
-        padding: 40px;
+        padding: 30px;
     }
 
     .intro h1 {
