@@ -12,6 +12,10 @@
 
 /* ---FOR SMARTPHONE----------------------------------------------- */
 @media all and (max-width: 670px) {
+    .container {
+        padding: 40px;
+    }
+
     .intro h1 {
         font-size: 40px;
         line-height: 0.5rem;
