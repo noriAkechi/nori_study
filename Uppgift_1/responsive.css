@@ -18,7 +18,6 @@
 
     .intro h1 {
         font-size: 40px;
-        line-height: 0.5rem;
     }
     
     .intro h2 {
@@ -70,7 +69,7 @@
     }
 
     textarea {
-        width: 95%;
+        width: 96%;
         padding: 10px;
         margin: 5px;
         font-family: Helvetica, sans-serif;
