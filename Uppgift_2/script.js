@@ -9,17 +9,19 @@ function formValidation() {
     let flag = 0; //Default setting = false
     let date = new Date(); 
     let today = date.toDateString();
-    let inquiry = [today, name, email, comment]; 
+    //let inquiry = [today, name, email, comment]; 
+    //make instance from class "User"
+    let contactPerson = new Contact(date, name, email, comment);
 
     //Validation: user's name
-    if (name.length != 0){ // if not blank
+    if (contactPerson.name.length != 0){ // if not blank
         flag ++;
     } else {
         document.getElementById("name").placeholder = "Name field is blank";
     }
 
     // //Validation: user's Email address
-    if (email.length == 0) {
+    if (contactPerson.email.length == 0) {
         document.getElementById("email").placeholder = "Epost field is blank";
     //Validation: Correct form or not (call external function)
     } else if (validateEmail(email)){
@@ -29,7 +31,7 @@ function formValidation() {
     }
 
     //Validation: user's comment
-    if (comment.length != "") { // if not blank
+    if (contactPerson.comment.length != "") { // if not blank
         flag ++;
     } else {
         document.getElementById("comment").placeholder = "Massage field is blank";
@@ -37,11 +39,12 @@ function formValidation() {
 
     //If all are passed
     if (flag == 3) {
-        window.confirm("Are you really really sure?\n\n" + inquiry.join('\n-------------------\n'));
+        //window.confirm("Are you really really sure?\n\n" + inquiry.join('\n-------------------\n'));
+        contactPerson.confirmText();
         document.getElementById("alartText").innerHTML = "Thank you! Message has been sent!";
     }
 
-//    document.getElementById("chk").innerHTML = flag;
+    document.getElementById("chk").innerHTML = flag;
 }
 
 
