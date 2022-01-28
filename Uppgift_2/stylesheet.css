@@ -73,6 +73,7 @@ header {
 /*** WORKS *******************************************************/
 .works {
     text-align: center;
+    z-index: -1;
 }
 
 .work-list {
