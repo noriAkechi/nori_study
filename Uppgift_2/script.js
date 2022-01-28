@@ -12,6 +12,8 @@ function formValidation() {
     let date = new Date(); 
     let today = date.toDateString();
 
+    // Det fungerar om jag definerar class:en här i script.js... 
+    //-----------------------------------------------------------
     // let ContactPerson = class {
     //     constructor(date, name, email, comment) {
     //         this.date = date;
