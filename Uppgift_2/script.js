@@ -1,6 +1,8 @@
 //------------------------------------------------------------------------------------------
 //Contact form validation
 //------------------------------------------------------------------------------------------
+import { ContactPerson } from "./classLib.js";
+
 function formValidation() {
     //initialize variables
     let name = document.getElementById("name").value;
@@ -9,9 +11,28 @@ function formValidation() {
     let flag = 0; //Default setting = false
     let date = new Date(); 
     let today = date.toDateString();
-    //let inquiry = [today, name, email, comment]; 
-    //make instance from class "User"
-    let contactPerson = new Contact(date, name, email, comment);
+
+    // let ContactPerson = class {
+    //     constructor(date, name, email, comment) {
+    //         this.date = date;
+    //         this.name = name;
+    //         this.email = email;
+    //         this.comment = comment;
+    //     }
+
+    //     confirmText() {
+    //          window.confirm("Are you really really sure???\n\n" +
+    //              this.date + "\n-------------------\n" +
+    //              this.name + "\n-------------------\n" +
+    //              this.email + "\n-------------------\n" +
+    //              this.comment + "\n-------------------\n"
+    //          );
+    //      }
+    // }
+
+    //make instance from class "ContactPerson"
+    let contactPerson = new ContactPerson(today, name, email, comment);
+    document.getElementById("chk") = contactPerson.name;
 
     //Validation: user's name
     if (contactPerson.name.length != 0){ // if not blank
@@ -21,30 +42,29 @@ function formValidation() {
     }
 
     // //Validation: user's Email address
-    if (contactPerson.email.length == 0) {
-        document.getElementById("email").placeholder = "Epost field is blank";
-    //Validation: Correct form or not (call external function)
-    } else if (validateEmail(email)){
-        flag ++;
-    } else {
-        alert("You have entered an invalid email address!")
-    }
+     if (contactPerson.email.length == 0) {
+         document.getElementById("email").placeholder = "Epost field is blank";
+     //Validation: Correct form or not (call external function)
+     } else if (validateEmail(email)){
+         flag ++;
+     } else {
+         alert("You have entered an invalid email address!")
+     }
 
     //Validation: user's comment
     if (contactPerson.comment.length != "") { // if not blank
-        flag ++;
-    } else {
-        document.getElementById("comment").placeholder = "Massage field is blank";
-    }
+         flag ++;
+     } else {
+         document.getElementById("comment").placeholder = "Massage field is blank";
+     }
 
-    //If all are passed
-    if (flag == 3) {
-        //window.confirm("Are you really really sure?\n\n" + inquiry.join('\n-------------------\n'));
-        contactPerson.confirmText();
-        document.getElementById("alartText").innerHTML = "Thank you! Message has been sent!";
-    }
+         //If all are passed
+         if (flag == 3) {
+             //window.confirm("Are you really really sure?\n\n" + inquiry.join('\n-------------------\n'));
+             contactPerson.confirmText();
+             document.getElementById("alartText").innerHTML = "Thank you! Message has been sent!";
+         }
 
-    document.getElementById("chk").innerHTML = flag;
 }
 
 
