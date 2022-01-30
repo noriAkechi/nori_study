@@ -73,7 +73,6 @@ header {
 /*** WORKS *******************************************************/
 .works {
     text-align: center;
-    z-index: -1;
 }
 
 .work-list {
@@ -98,6 +97,7 @@ header {
     color: black;
     border: solid white 5px;
     border-radius: 15px;
+    z-index: -1;
 }
 
 .work:hover {
