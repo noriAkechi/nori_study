@@ -209,6 +209,10 @@ textarea:focus {
     background-color: rgb(255, 255, 128);
 }
 
+#alartText {
+    font-size: 24 px;
+}
+
 /*** FOOTER *******************************************************/
 footer {
     text-align: center;
