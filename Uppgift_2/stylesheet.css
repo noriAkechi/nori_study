@@ -73,7 +73,11 @@ header {
 /*** WORKS *******************************************************/
 .works {
     text-align: center;
+<<<<<<< HEAD
     z-index: -1;
+=======
+    x-index: -1;
+>>>>>>> d5d237573ea28c415b2f54e1c1bd815a9b3bd966
 }
 
 .work-list {
