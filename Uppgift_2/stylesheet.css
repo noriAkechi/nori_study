@@ -27,7 +27,7 @@ header {
 }
 
 .nav {
-    position: relative;
+    position: sticky;
     width: 100%;
     text-align: center;
 }
@@ -35,7 +35,7 @@ header {
 .nav a {
     font-size: 18px;
     padding: 0 20px;
-    z-index: 100;
+    z-index: 1;
 }
 
 .fa-bars {
@@ -73,11 +73,6 @@ header {
 /*** WORKS *******************************************************/
 .works {
     text-align: center;
-<<<<<<< HEAD
-    z-index: -1;
-=======
-    x-index: -1;
->>>>>>> d5d237573ea28c415b2f54e1c1bd815a9b3bd966
 }
 
 .work-list {
@@ -102,6 +97,7 @@ header {
     color: black;
     border: solid white 5px;
     border-radius: 15px;
+    z-index: -1;
 }
 
 .work:hover {
@@ -159,20 +155,20 @@ header {
 }
 
 input[type=text] {
-	box-sizing: border-box;
-	width: 300px;
+    box-sizing: border-box;
+    width: 300px;
     padding: 10px;
     margin: 5px;
     font-family: Helvetica, sans-serif;
     font-size: 16px;
-	transition: 0.3s;
-	border: 1px solid black;
-	border-radius: 4px;
-	outline: none;
+    transition: 0.3s;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
 }
 
 input[type=text]:focus {
-	background-color: rgb(255, 255, 128);
+    background-color: rgb(255, 255, 128);
 }
 
 textarea {
@@ -181,14 +177,14 @@ textarea {
     margin: 5px;
     font-family: Helvetica, sans-serif;
     font-size: 16px;
-	transition: 0.3s;
-	border: 1px solid black;
-	border-radius: 4px;
-	outline: none;
+    transition: 0.3s;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
 }
 
 textarea:focus {
-	background-color: rgb(255, 255, 128);
+    background-color: rgb(255, 255, 128);
 }
 
 .submitBtm {
@@ -213,9 +209,14 @@ textarea:focus {
     background-color: rgb(255, 255, 128);
 }
 
+#alartText {
+    font-size: 24 px;
+}
+
 /*** FOOTER *******************************************************/
 footer {
     text-align: center;
     line-height: 80px;
     height: 80px;
 }
+
