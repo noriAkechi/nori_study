@@ -33,7 +33,7 @@ function formValidation() {
 
          //Method: Send a confirmation email. 
          sendConfirmation() {
-             //exempel
+             //EX. to send cofirmation mail to this user
          }
     }
 
